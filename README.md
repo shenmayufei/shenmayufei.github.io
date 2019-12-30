@@ -1,6 +1,6 @@
 ### 我的博客
 
-地址：[http://shenmayufei.org](http://shenmayufei.org)
+地址：[https://shenmayufei.github.io/](https://shenmayufei.github.io/)
 
 ### 安装说明
 
