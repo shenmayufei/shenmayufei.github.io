@@ -32,11 +32,14 @@
     opacity: 1;
   }
 }
-.post-toc .nav .nav-child {
+.post-toc .nav {
   display: block;
 }
 .post-toc ol {
   font-size: 13px;
+}
+.headband {
+  display: none;
 }
 html {
   line-height: 1.15; /* 1 */
@@ -1167,6 +1170,11 @@ pre .javascript .function {
   position: fixed;
   top: 0;
 }
+@media (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+}
 .sidebar-inner {
   color: #999;
   padding: 18px 10px;
@@ -1192,6 +1200,13 @@ pre .javascript .function {
   margin: 0 auto;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
+}
+.site-author-image {
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
 }
 .site-author-name {
   color: var(--text-color);
@@ -1222,7 +1237,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fcbd3b;
+  background: #ff7a4e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1335,6 +1350,7 @@ pre .javascript .function {
   .sidebar-toggle {
     left: 20px;
     opacity: 0.8;
+    display: none;
   }
 }
 .sidebar-toggle:hover .toggle-line {
@@ -1362,9 +1378,10 @@ pre .javascript .function {
   line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .post-toc .nav .nav-child {
-  display: none;
+  display: block;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
@@ -1586,6 +1603,23 @@ pre .javascript .function {
 }
 .use-motion .collection-header {
   opacity: 0;
+}
+.post-title {
+  font-size: 26px;
+  text-align: center;
+  word-break: break-word;
+  font-weight: $posts-expand-title-font-weight;
+  background-color: #b9d3ee;
+  border-radius: 0.3em;
+  line-height: 1em;
+  padding-bottom: 0.12em;
+  padding-top: 0.12em;
+  box-shadow: 2px 2px 7px #9fb6cd;
+}
+@media (max-width: 767px) {
+  .post-title {
+    font-size: 22px;
+  }
 }
 .posts-collapse {
   margin-left: 55px;
